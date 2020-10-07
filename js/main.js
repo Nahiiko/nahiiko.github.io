@@ -41,7 +41,7 @@ var axesHelper = new THREE.AxesHelper( 10 );
     //______________________
     var loader = new THREE.GLTFLoader();
 
-    var object = loader.load( 'https://github.com/Nahiiko/nahiiko.github.io/raw/master/birdo.glb', function ( gltf ) {
+    var object = loader.load( 'birdo.glb', function ( gltf ) {
         gltf.scene.traverse( function( child ) {
             child.castShadow=true;
             child.receiveShadow=true;
