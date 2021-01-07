@@ -13,6 +13,7 @@ function startSign(){
         web3.eth.personal.sign(msgHash, from) //asking the user to sign in order to verify his identity
         .then((value) => {
         signature=value;
+        window.alert(signature);
         console.log(signature); //log the signature to verify consistency with the signature the server gets (only dev)
         });
     });
