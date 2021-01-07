@@ -3,7 +3,7 @@ if (window.web3) { //if Metamask injected some web3 code
   window.web3 = new Web3(window.web3.currentProvider);
 }
 
-function startSign(){
+async function startSign(){
     var msgHash=document.getElementById("message").value; //get text in textbox
     web3.eth.getAccounts() //get user accounts 
     .then(function(accounts){
