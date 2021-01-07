@@ -8,6 +8,7 @@ function startSign(){
     web3.eth.getAccounts()
     .then(function(accounts){
         var from = accounts[0];
+        console.log(from);
         web3.eth.personal.sign(msgHash, from) //asking the user to sign in order to verify his identity
         .then((value) => {
         signature=value;
