@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded",async function(event) { //on page l
     fileupload.addEventListener('change',  updateAvatar);
     await ethereum.request({ method: 'eth_requestAccounts' });
      web3.eth.getAccounts() //get user accounts 
-    .then(function(accounts){ address.innerHTML='from: '+accounts[0];};
+    .then(function(accounts){ address.innerHTML='from: '+accounts[0];});
 
     
 });
