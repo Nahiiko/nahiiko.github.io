@@ -18,10 +18,13 @@ async function startSign(){
     });
 }
 
-document.addEventListener("DOMContentLoaded",function(event) { //on page load
+document.addEventListener("DOMContentLoaded",async function(event) { //on page load
     document.getElementById("message").focus();
-    ethereum.request({ method: 'eth_requestAccounts' });
     fileupload.addEventListener('change',  updateAvatar);
+    await ethereum.request({ method: 'eth_requestAccounts' });
+     web3.eth.getAccounts() //get user accounts 
+    .then(function(accounts){ address.innerHTML='from: '+accounts[0];};
+
     
 });
 
