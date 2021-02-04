@@ -24,12 +24,13 @@ document.addEventListener("DOMContentLoaded",async function(event) { //on page l
     await ethereum.request({ method: 'eth_requestAccounts' });
      web3.eth.getAccounts() //get user accounts 
     .then(function(accounts){ address.innerHTML='from: '+accounts[0];});
-
-    
+    if(localStorage.getItem('avatar')!=null){avatar.style.backgroundImage=localStorage.getItem('avatar');} 
 });
 
 async function updateAvatar(e){
-    avatar.style.backgroundImage= "url('"+await toBase64(fileupload.files[0])+"')";
+    let userAvatar=await toBase64(fileupload.files[0]);
+    avatar.style.backgroundImage= "url('"+userAvatar+"')";
+    localStorage.setItem('avatar', "url('"+userAvatar+"')");
 }
 
 const toBase64 = file => new Promise((resolve, reject) => {
