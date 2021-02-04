@@ -19,10 +19,15 @@
 <body>
     <div id=container>
         <div id=bodyTxt>write, sign & mint autographs</div>
-            <div id=bodyDesc>write a message for someone, then sign it using your Ethereum Private key, making it unique and impossible to copy. You can even mint it to send it to your friends/collectors.</div>
-        <input type="text" id="message" name="message" required
-           minlength="4" maxlength="50" size="10">
-        <button class="button" onclick=startSign()>Sign it</button>
+            <!--<div id=bodyDesc>write a message for someone, then sign it using your Ethereum Private key, making it unique and impossible to copy. You can even mint it to send it to your friends/collectors.</div>-->
+        <div id=box>
+             <input type="text" id="message" name="message" required
+               minlength="4" maxlength="50" size="10" placeholder="Type your autograph here...">
+            <p id=address>from: 0xcd9Cbd0Efe4d94DE28eC47D27F72FeC43cA422F3</p>
+            <div id=avatar></div>
+        </div>
+       
+        <!--<button class="button" onclick=startSign()>Sign it</button>-->
     </div>
     <div id=logor></div>
     <div id=logo>autographs.eth</div>

@@ -18,3 +18,8 @@ async function startSign(){
         });
     });
 }
+
+document.addEventListener("DOMContentLoaded", function(event) { //on page load
+    document.getElementById("message").focus();
+    
+});
