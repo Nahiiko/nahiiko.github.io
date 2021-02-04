@@ -4,7 +4,6 @@ if (window.web3) { //if Metamask injected some web3 code
 }
 
 async function startSign(){
-    await window.ethereum.enable(); //give the code access to your ETH address
     var msgHash=document.getElementById("message").value; //get text in textbox
     web3.eth.getAccounts() //get user accounts 
     .then(function(accounts){
@@ -19,7 +18,20 @@ async function startSign(){
     });
 }
 
-document.addEventListener("DOMContentLoaded", function(event) { //on page load
+document.addEventListener("DOMContentLoaded",function(event) { //on page load
     document.getElementById("message").focus();
+    ethereum.request({ method: 'eth_requestAccounts' });
+    fileupload.addEventListener('change',  updateAvatar);
     
+});
+
+async function updateAvatar(e){
+    avatar.style.backgroundImage= "url('"+await toBase64(fileupload.files[0])+"')";
+}
+
+const toBase64 = file => new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
 });

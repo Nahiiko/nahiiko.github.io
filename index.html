@@ -23,11 +23,13 @@
         <div id=box>
              <input type="text" id="message" name="message" required
                minlength="4" maxlength="50" size="10" placeholder="Type your autograph here...">
-            <p id=address>from: 0xcd9Cbd0Efe4d94DE28eC47D27F72FeC43cA422F3</p>
-            <div id=avatar></div>
+            <p id=address>from: 0x...</p>
+            <input id =fileupload type="file" accept="image/png, image/jpeg">
+            <div id=avatar onclick=fileupload.click()></div>
+            
+            <button class="button" onclick=startSign()>mint</button>
         </div>
        
-        <!--<button class="button" onclick=startSign()>Sign it</button>-->
     </div>
     <div id=logor></div>
     <div id=logo>autographs.eth</div>
