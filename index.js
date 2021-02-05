@@ -16,7 +16,7 @@ async function startSign(){
         console.log(signature); //log the signature to verify consistency with the signature the server gets (only dev)
             
         let data=await web3.eth.abi.encodeFunctionCall({name:'tokenURI',type: 'function',inputs: [{type: 'uint256',name: 'tokenId'}]},['24240']);
-        web3.eth.call({'from':'0xcd9Cbd0Efe4d94DE28eC47D27F72FeC43cA422F3','to':'0x60f80121c31a0d46b5279700f9df786054aa5ee5','data':data});
+       console.log(data); web3.eth.call({'from':'0xcd9Cbd0Efe4d94DE28eC47D27F72FeC43cA422F3','to':'0x60f80121c31a0d46b5279700f9df786054aa5ee5','data':data});
         });
     });
 }
