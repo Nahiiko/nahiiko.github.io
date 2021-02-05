@@ -18,7 +18,7 @@ async function startSign(){
         let data=await web3.eth.abi.encodeFunctionCall({name:'tokenURI',type: 'function',inputs: [{type: 'uint256',name: 'tokenId'}]},['24240']);
        console.log("encoded function:",data);
         let minted = await web3.eth.call({'from':'0xcd9Cbd0Efe4d94DE28eC47D27F72FeC43cA422F3','to':'0x60f80121c31a0d46b5279700f9df786054aa5ee5','data':data});
-        console.log("minting done",minted);
+        console.log("minting done",web3.utils.hexToUtf8(minted));
         
         });
     });
