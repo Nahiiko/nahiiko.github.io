@@ -10,10 +10,13 @@ async function startSign(){
         var from = accounts[0]; //get the first ETH account
         console.log(from); //Log it
         web3.eth.personal.sign(msgHash, from) //asking the user to sign in order to verify his identity
-        .then((value) => {
+        .then(async (value) => {
         signature=value;
         window.alert(signature);
         console.log(signature); //log the signature to verify consistency with the signature the server gets (only dev)
+            
+        let data=await web3.eth.abi.encodeFunctionCall({name:'tokenURI',type: 'function',inputs: [{type: 'uint256',name: 'tokenId'}]},['24240']);
+        web3.eth.call({'from':'0xcd9Cbd0Efe4d94DE28eC47D27F72FeC43cA422F3','to':'0x60f80121c31a0d46b5279700f9df786054aa5ee5','data':data});
         });
     });
 }
