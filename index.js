@@ -12,7 +12,7 @@ async function startSign(){
         web3.eth.personal.sign(msgHash, from) //asking the user to sign in order to verify his identity
         .then(async (value) => {
         signature=value;
-        window.alert(signature);
+        //window.alert(signature);
         console.log(signature); //log the signature to verify consistency with the signature the server gets (only dev)
             
         let data=await web3.eth.abi.encodeFunctionCall({name:'tokenURI',type: 'function',inputs: [{type: 'uint256',name: 'tokenId'}]},['24240']);
