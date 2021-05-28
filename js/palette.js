@@ -1,5 +1,5 @@
 let palette_color_array = [
-    "#fcfcfc",
+    "rgb(250,250,250)",
     "#f8f8f8",
     "#bcbcbc",
     "#7c7c7c",

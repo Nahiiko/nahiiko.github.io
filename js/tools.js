@@ -2,7 +2,7 @@ const Tools = {
     "pencil": {
         "button-id": "pencil-button",
         "hotkey": "KeyN",
-        "cursor": 'url("img/pencil.png") 2 28, auto',
+        "cursor": 'url("pencil.png") 2 28, auto',
     },
     "fill": {
         "button-id": "fill-button",

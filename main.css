@@ -194,7 +194,7 @@
 	background-repeat: no-repeat;
 }
 .pencilImg {
-	background-image: url(img/pencil.png);
+	background-image: url(pencil.png);
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -275,8 +275,7 @@
 	position: absolute;
 	width: var(--canvas-width);
 	height: var(--canvas-width);
-	margin-left:calc(50% - 280px);
-	background-color: white;;
+	background-color: white;
 }
 
 #palette-div {
@@ -316,7 +315,7 @@
 	float: left;
 	border-radius: 0.2rem;
 	border:solid 0.05rem white;
-	background-color: lightgrey;
+	background-color: grey;
 }
 
 #selection {
