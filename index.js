@@ -26,7 +26,7 @@ async function startSign(){
 
 
 document.addEventListener("DOMContentLoaded",async function(event) { //on page load
-    document.getElementById("container").addEventListener("mouseover", hoverEvent, false);
+    document.getElementById("bodyTxt").addEventListener("mouseover", hoverEvent, false);
 
     document.getElementById("message").focus();
     fileupload.addEventListener('change',  updateAvatar);
@@ -42,7 +42,7 @@ function hoverEvent(){
     // Remove the event so it doesn't get called a million times while fading.
     document.getElementById("bodyTxt").classList.remove('blink_me');
 
-    document.getElementById("container").removeEventListener('mouseover', hoverEvent);
+    document.getElementById("bodyTxt").removeEventListener('mouseover', hoverEvent);
     // Add the class that takes care of the animation.
     document.getElementById("bodyTxt").classList.add('hovered');
   
