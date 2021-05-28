@@ -24,14 +24,31 @@ async function startSign(){
     });
 }
 
+
 document.addEventListener("DOMContentLoaded",async function(event) { //on page load
+    document.getElementById("container").addEventListener("mouseover", hoverEvent, false);
+
     document.getElementById("message").focus();
     fileupload.addEventListener('change',  updateAvatar);
     if(localStorage.getItem('avatar')!=null){avatar.style.backgroundImage=localStorage.getItem('avatar');} 
     await ethereum.request({ method: 'eth_requestAccounts' });
      web3.eth.getAccounts() //get user accounts 
     .then(function(accounts){ address.innerHTML='from: '+accounts[0];});
+    
 });
+
+function hoverEvent(){
+    console.log("hi");
+    // Remove the event so it doesn't get called a million times while fading.
+    document.getElementById("bodyTxt").classList.remove('blink_me');
+
+    document.getElementById("container").removeEventListener('mouseover', hoverEvent);
+    // Add the class that takes care of the animation.
+    document.getElementById("bodyTxt").classList.add('hovered');
+  
+    // After a while, still add 'display: none' to remove the element from flow, if needed.
+    setTimeout(function(){document.getElementById("bodyTxt").style.display = 'none';},1000);
+};
 
 async function updateAvatar(e){
     let userAvatar=await toBase64(fileupload.files[0]);
