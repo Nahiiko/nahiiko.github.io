@@ -11,6 +11,7 @@ color:white;
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(0,0,0,.3);
 }
+
 body{
     background-color:black;
     background-image:url(bg.jpg);
