@@ -3,10 +3,10 @@
     width:8em;
 height:auto;    
 color:white;
-    left:8vw;
-    top:1.3em;
+    left:7.2%;
+    top:2.2%;
     position:fixed;
-    font-size: 2em;
+    font-size: 24px;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(0,0,0,.3);
