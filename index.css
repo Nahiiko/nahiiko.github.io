@@ -160,9 +160,9 @@ background:black;
   cursor: pointer;
     border-radius:.3em;
     position:relative;
-    top:calc(100% + 0.5rem);
+    top:calc(100% + 0.1rem);
     width:4.5rem;
-    margin-left:calc(50% - 1rem);
+    margin-left:calc(50% - 2.25rem);
 }
 
 .button{
