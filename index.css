@@ -107,6 +107,7 @@ box-shadow: 0px 5px 10px -3px rgba(0,0,0,0.3);
     width:14rem;
     color:lightgrey;
     position:absolute;
+    z-index: 1;
 }
 
 .blink_me {

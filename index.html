@@ -8,12 +8,17 @@
   <meta name="author" content="autographs.crypto">
 
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet"  href="/main.css">
+
+
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js">
     </script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <script src="index.js"></script>
+
+
 
   <meta name="twitter:card" content="player" />
 	<meta name="twitter:site" content="@Nahiko" />
@@ -33,6 +38,58 @@
     <div id=container>
         <div id=bodyTxt class=blink_me>Draw something here</div>
         <div id=box>
+
+          <div hidden id="toolbar">
+            <div class="no-select undoImg toolbarButton" id="undo-button">
+              <span class="tooltipText">undo <span class="hotkeyText">(Z)</span></span>
+            </div>
+    
+            <div class="no-select redoImg toolbarButton" id="redo-button">
+              <span class="tooltipText">redo <span class="hotkeyText">(X)</span></span>
+            </div>
+    
+            <div class="no-select pencilImg toolbarButton" id="pencil-button">
+              <span class="tooltipText"></span>
+            </div>
+    
+            <div class="no-select fillImg toolbarButton" id="fill-button">
+              <span class="tooltipText"></span>
+            </div>
+            
+            <div class="no-select eraserImg toolbarButton" id="eraser-button">
+              <span class="tooltipText"></span>
+            </div>
+    
+            <div class="no-select selectionImg toolbarButton" id="selection-button">
+              <span class="tooltipText"></span>
+            </div>
+    
+            <div class="no-select colorpickerImg toolbarButton" id="colorpicker-button">
+              <span class="tooltipText"></span>
+            </div>
+    
+            <div class="no-select gridImg toolbarButton" id="grid-button">
+              <span class="tooltipText">grid <span class="hotkeyText">(G)</span></span>
+            </div>
+    
+            <div class="no-select saveImg toolbarButton" id="save-button">
+              <span class="tooltipText">save</span>
+            </div>
+    
+            <div hidden id="popup-message" class="fadeOutAnimation"></div>
+    
+            <div hidden id="active-color-preview"></div>
+    
+            <label hidden id="active-color-label"></label>
+          </div>
+    
+          <div id="canvas-div"></div>
+          <div hidden id="palette-div"></div>
+
+
+
+
+
           <button class="button" onclick=startSign()>mint</button>
         </div>
        
@@ -41,4 +98,9 @@
     <div id=madeby>made by nahiko with love.</div>
     
 </body>
+<script type="text/javascript" src="js/tools.js"></script>
+<script type="text/javascript" src="js/palette.js"></script>
+<script type="text/javascript" src="js/historyStates.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </html>
